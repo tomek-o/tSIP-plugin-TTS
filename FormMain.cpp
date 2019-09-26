@@ -120,6 +120,10 @@ void TfrmMain::Send(void)
 		LOG("Failed to create/write wav file %s\n", filename.c_str());
 		return;
 	}
+	else
+	{
+		//LOG("TTS: [%s] written to %s\n", redInput->Text, filename.c_str());
+	}
 	redInput->Text = "";
 
 	phoneState.audioError = false;
