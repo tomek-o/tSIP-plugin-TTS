@@ -31,6 +31,7 @@ __published:
 	TLabel *lblBuilt;
 	TLabel *lblBuildTimestamp;
 	TMemo *Memo;
+	TLabel *lblThirdParty;
 	void __fastcall lblInfo2Click(TObject *Sender);
 private:
 public:

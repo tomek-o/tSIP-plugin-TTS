@@ -4,7 +4,7 @@ object frmAbout: TfrmAbout
   BorderStyle = bsDialog
   Caption = 'About'
   ClientHeight = 331
-  ClientWidth = 440
+  ClientWidth = 517
   Color = clBtnFace
   DefaultMonitor = dmMainForm
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object frmAbout: TfrmAbout
   object Panel1: TPanel
     Left = 8
     Top = 8
-    Width = 424
+    Width = 501
     Height = 284
     BevelInner = bvRaised
     BevelOuter = bvLowered
@@ -281,8 +281,8 @@ object frmAbout: TfrmAbout
     object Comments: TLabel
       Left = 88
       Top = 65
-      Width = 81
-      Height = 26
+      Width = 65
+      Height = 13
       Caption = 'License: BSD'
       WordWrap = True
       IsControl = True
@@ -334,21 +334,73 @@ object frmAbout: TfrmAbout
       Caption = 'lblBuildTimestamp'
       IsControl = True
     end
+    object lblThirdParty: TLabel
+      Left = 22
+      Top = 85
+      Width = 169
+      Height = 13
+      Caption = 'Third party code used with licenses:'
+    end
     object Memo: TMemo
       Left = 6
-      Top = 84
-      Width = 411
-      Height = 174
+      Top = 104
+      Width = 491
+      Height = 154
       Color = clBtnFace
       Lines.Strings = (
-        'No third-party code used.')
+        
+          '================================================================' +
+          '============='
+        'json-cpp license:'
+        
+          '================================================================' +
+          '============='
+        ''
+        
+          'The JsonCpp library'#39's source code, including accompanying docume' +
+          'ntation, tests and '
+        
+          'demonstration applications, are licensed under the following con' +
+          'ditions...'
+        ''
+        
+          'The author (Baptiste Lepilleur) explicitly disclaims copyright i' +
+          'n all jurisdictions which recognize such '
+        
+          'a disclaimer. In such jurisdictions, this software is released i' +
+          'nto the Public Domain.'
+        ''
+        
+          'In jurisdictions which do not recognize Public Domain property (' +
+          'e.g. Germany as of 2010), this '
+        
+          'software is Copyright (c) 2007-2010 by Baptiste Lepilleur, and i' +
+          's released under the terms of the MIT '
+        'License.'
+        ''
+        
+          'In jurisdictions which recognize Public Domain property, the use' +
+          'r of this software may choose to '
+        
+          'accept it either as 1) Public Domain, 2) under the conditions of' +
+          ' the MIT License (see below), or 3) '
+        
+          'under the terms of dual Public Domain/MIT License conditions des' +
+          'cribed here, as they choose.'
+        ''
+        
+          'The MIT License is about as close to Public Domain as a license ' +
+          'can get, and is described in clear, '
+        'concise terms at:'
+        ''
+        '   http://en.wikipedia.org/wiki/MIT_License ')
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
     end
   end
   object OKButton: TButton
-    Left = 182
+    Left = 211
     Top = 298
     Width = 75
     Height = 25
