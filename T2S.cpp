@@ -8,7 +8,7 @@
 //#include "sapi_simple.h"
 #define CINTERFACE
 #define COBJMACROS
-#include <sapi.h>
+#include "sapi.h"	// modified from original supplied with Turbo C++ 2006 - not linking sapi.lib
 #include <stdio.h>
 
 //---------------------------------------------------------------------------
@@ -127,6 +127,6 @@ int T2S::WriteToFile(AnsiString filename, AnsiString text)
 		return 2;
 	}
 #endif
-
+
 	return 0;
 }
