@@ -49,6 +49,20 @@ struct s8087CW
     }
 };
 
+std::wstring AnsiToUnicode(const char *s)
+{
+	DWORD size = MultiByteToWideChar(CP_ACP,0, s, -1, NULL, 0);
+	if (size == 0)
+	{
+		return std::wstring();
+	}
+	wchar_t *buffer = new wchar_t[size];
+	MultiByteToWideChar(CP_ACP, 0, s, -1, buffer, size);
+	std::wstring ret = std::wstring(buffer);
+	delete[] buffer;
+	return ret;
+}
+
 }	// namespace
 
 int T2S::Init(void)
@@ -90,9 +104,9 @@ int T2S::WriteToFile(AnsiString filename, AnsiString text)
 	s8087CW cw(0x133f);
 	
 	std::wstring widestr;
-	widestr = std::wstring(text.c_str(), text.c_str() + text.Length());
+	widestr = AnsiToUnicode(text.c_str());
 
-	wchar_t wtext[4096];
+	wchar_t wtext[8192];
 	memset(wtext, 0, sizeof(wtext));
 	// Comma then a space a few times should insert bit of silence
 	snwprintf(wtext, sizeof(wtext)/sizeof(wtext[0]) - 1, L"%s", widestr.c_str());
