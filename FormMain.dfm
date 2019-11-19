@@ -2,7 +2,7 @@ object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = 'tSIP Text-To-Speech plugin'
-  ClientHeight = 287
+  ClientHeight = 306
   ClientWidth = 464
   Color = clBtnFace
   Constraints.MinHeight = 200
@@ -722,12 +722,13 @@ object frmMain: TfrmMain
   TextHeight = 13
   object pnlBottom: TPanel
     Left = 0
-    Top = 192
+    Top = 211
     Width = 464
     Height = 95
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitTop = 192
     object pnlBottom2: TPanel
       Left = 0
       Top = 54
@@ -735,7 +736,6 @@ object frmMain: TfrmMain
       Height = 41
       Align = alBottom
       TabOrder = 0
-      ExplicitTop = 78
       DesignSize = (
         464
         41)
@@ -801,18 +801,17 @@ object frmMain: TfrmMain
       Font.Name = 'Courier New'
       Font.Style = []
       ParentFont = False
+      PopupMenu = popupInput
       ScrollBars = ssVertical
       TabOrder = 1
       OnKeyPress = redInputKeyPress
-      ExplicitTop = 33
-      ExplicitHeight = 45
     end
   end
   object redHistory: TRichEdit
     Left = 0
     Top = 0
     Width = 464
-    Height = 159
+    Height = 178
     TabStop = False
     Align = alClient
     Color = clBtnFace
@@ -826,17 +825,17 @@ object frmMain: TfrmMain
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 1
-    ExplicitHeight = 129
+    ExplicitHeight = 159
   end
   object pnlPlaying: TPanel
     Left = 0
-    Top = 159
+    Top = 178
     Width = 464
     Height = 33
     Align = alBottom
     TabOrder = 2
     Visible = False
-    ExplicitTop = 8
+    ExplicitTop = 159
     DesignSize = (
       464
       33)
@@ -948,6 +947,14 @@ object frmMain: TfrmMain
     object miClearHistory: TMenuItem
       Caption = 'Clear'
       OnClick = miClearHistoryClick
+    end
+  end
+  object popupInput: TPopupMenu
+    Left = 8
+    Top = 200
+    object miInputPaste: TMenuItem
+      Caption = 'Paste'
+      OnClick = miInputPasteClick
     end
   end
 end

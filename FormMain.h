@@ -49,6 +49,8 @@ __published:	// IDE-managed Components
 	TLabel *lblPlaying;
 	TLabel *Label1;
 	TButton *btnCancelPlaying;
+	TPopupMenu *popupInput;
+	TMenuItem *miInputPaste;
 	void __fastcall miAboutClick(TObject *Sender);
 	void __fastcall btnSendClick(TObject *Sender);
 	void __fastcall tmrPollTimer(TObject *Sender);
@@ -57,6 +59,7 @@ __published:	// IDE-managed Components
 	void __fastcall miClearHistoryClick(TObject *Sender);
 	void __fastcall btnCancelPlayingClick(TObject *Sender);
 	void __fastcall miSettingsClick(TObject *Sender);
+	void __fastcall miInputPasteClick(TObject *Sender);
 private:	// User declarations
 	void Send(void);
 	void AddOutputText(AnsiString text);

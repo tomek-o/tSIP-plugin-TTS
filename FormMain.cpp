@@ -171,3 +171,10 @@ void __fastcall TfrmMain::miSettingsClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TfrmMain::miInputPasteClick(TObject *Sender)
+{
+	redInput->PasteFromClipboard();	
+}
+//---------------------------------------------------------------------------
+
